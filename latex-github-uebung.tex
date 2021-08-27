@@ -39,6 +39,27 @@ komfortabel an diesem gearbeitet werden.
   \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt] (Rep) to [out = 225, in = -45]  (Stage);
 \end{tikzpicture}
 
+Das \textbf{Arbeitsverzeichnis} ist das normaler Verzeichnis, in dem auf dem
+Computer die Dateien gespeichert werden.
+
+Das \textbf{Repository} (Repo) ist der Inhalt des Arbeitsverzeichnis in allen
+gespeicherten Varianten. Wurde im Arbeitsverzeichnis beispielsweise
+eine Datei irrtümlicherweise gelöscht, kann ein älterer Stand des
+Arbeitsverzeichnisses wiederhergestellt werden, um die Datei
+wiederzubekommen. Hierfür muss natürlich vorher der Inhalt des
+Arbeitsverzeichnisses im Repo gespeichert werden. Dies erfolgt
+gewöhnlich immer, wenn eine Sinneinheit abgeschlossen worden ist. Hier
+zum Beispiel vor und nach Erstellen des Diagramms. Das Speichern im
+Repo wird als \textsl{Commit} bezeichnet.
+
+Die \textbf{Stage} steht zwischen Arbeitsverzeichnis und Repository.
+Ein Commit ist immer ein wesentlicher Schritt, der genau dokumentiert
+wird und für alle anderen Menschen auf Ewigkeit sichtbar ist. Daher
+werden alle Änderungen zuerst auf die Stage (Bühne) gesetzt und vor
+dem Commit gründlich geprüft. Idealerweise sollte das folgende Commit
+nicht 1 Minute später mit dem Kommentar \textsl{Diese Datei hatte ich
+  vergessen} erfolgen.
+
 \end{document}
 
 %%% Local Variables:
