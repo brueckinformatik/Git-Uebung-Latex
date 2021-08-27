@@ -2,8 +2,8 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{ngerman}
-
+\usepackage{ngerman, tikz}
+\usetikzlibrary{calc, positioning}
 \title{Versionsverwaltung von \LaTeX{}}
 \author{Arne Brück}
 \date{27.08.21}
@@ -23,6 +23,17 @@ früheren Veränderungen zugreifen zu können. Dies soll anhand dieses
 Projektes verdeutlicht werden. Zusätzlich kann im Anschluss über
 GitHub das Projekt gesichert werden oder mit anderen Menschen zusammen
 komfortabel an diesem gearbeitet werden.
+
+\section{Grundlagen}
+
+\begin{tikzpicture}
+  \node (AV) [thick, draw, rounded corners, rectangle, text width = 5em, text
+  centered] {Arbeits\-verzeichnis};
+  \node (Stage) [thick, draw, rounded corners, rectangle, text width = 5em, text
+  centered, right = of AV ] {Stage};
+  \node (Rep) [thick, draw, rounded corners, rectangle, text width = 5em, text
+  centered, right  = of Stage] {Repository};
+\end{tikzpicture}
 
 \end{document}
 
