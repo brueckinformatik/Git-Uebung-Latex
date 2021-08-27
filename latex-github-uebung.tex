@@ -2,7 +2,9 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{ngerman, tikz}
+\usepackage[ngerman]{babel}
+\usepackage{ tikz}
+\usepackage[autostyle, german=quotes]{csquotes}
 \usetikzlibrary{calc, positioning}
 \title{Versionsverwaltung von \LaTeX{}}
 \author{Arne Brück}
@@ -59,6 +61,22 @@ werden alle Änderungen zuerst auf die Stage (Bühne) gesetzt und vor
 dem Commit gründlich geprüft. Idealerweise sollte das folgende Commit
 nicht 1 Minute später mit dem Kommentar \textsl{Diese Datei hatte ich
   vergessen} erfolgen.
+
+Die Stage ist also ein Bereich auf dem alles gesammelt und überprüft
+wird, was in der Zukunft über einen Commit im  Repository registriert wird.
+
+
+
+\section{Befehle}
+\begin{itemize}
+\item \textbf{git init:} Erster Befehl in einem Arbeitsverzeichnis,
+  erstellt das noch leere Repository.
+\item \textbf{git add . :} Setzt das gesamte Arbeitsverzeichnis auf
+  die Stage. Statt dem Punkt (steht für das Arbeitsverzeichnis) könnte
+  auch der Name einer Datei angegeben werden.
+\item \textbf{git commit -m \enquote{Kommentar zum Commit}:} Alles auf
+  der Stage wird im Repository mit dem Kommentar gesichert. 
+\end{itemize}
 
 \end{document}
 
