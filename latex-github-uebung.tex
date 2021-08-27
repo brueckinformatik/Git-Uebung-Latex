@@ -33,6 +33,10 @@ komfortabel an diesem gearbeitet werden.
   centered, right = of AV ] {Stage};
   \node (Rep) [thick, draw, rounded corners, rectangle, text width = 5em, text
   centered, right  = of Stage] {Repository};
+  \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt] (AV) to [out = 45, in = 135] (Stage);
+  \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt] (Stage) to [out = 225, in = -45]  (AV);
+  \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt] (Stage) to [out = 45, in = 135] (Rep);
+  \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt] (Rep) to [out = 225, in = -45]  (Stage);
 \end{tikzpicture}
 
 \end{document}
