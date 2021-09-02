@@ -14,9 +14,9 @@
 \maketitle
 
 \section{Zusammenfassung}
-Wer von Git höhrt, denkt häufig an GitHub, den Ort, der die Hälfte der
-Software der Welt enthält und von dem sich die ganze Welt die Software
-frei herunterladen kann.
+Wer von Git hört, denkt häufig an GitHub, dem Ort, der die Hälfte der
+Software der Welt enthält und von dem man sich die Software
+kostenlos herunterladen kann.
 
 Git ist aber unabhängig von GitHub, es ist ein Programm zur
 Versionsverwaltung. Es ermöglicht auf einfache Weise Sicherheitskopien
@@ -35,6 +35,10 @@ komfortabel an diesem gearbeitet werden.
   centered, right = of AV ] {Stage};
   \node (Rep) [thick, draw, rounded corners, rectangle, text width = 5em, text
   centered, right  = of Stage] {Repository};
+  \node (GitHub) [thick, draw, rounded corners, rectangle, text width = 5em, text
+  centered, right  = of Rep, dashed] {GitHub};
+  \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt, dashed] (Rep) to [out = 45, in = 135] (GitHub);
+  \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt, dashed] (GitHub) to [out = 225, in = -45]  (Rep);
   \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt] (AV) to [out = 45, in = 135] (Stage);
   \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt] (Stage) to [out = 225, in = -45]  (AV);
   \draw [ultra thick, ->, shorten >=4pt, shorten <=2pt] (Stage) to [out = 45, in = 135] (Rep);
@@ -75,7 +79,9 @@ wird, was in der Zukunft über einen Commit im  Repository registriert wird.
   die Stage. Statt dem Punkt (steht für das Arbeitsverzeichnis) könnte
   auch der Name einer Datei angegeben werden.
 \item \textbf{git commit -m \enquote{Kommentar zum Commit}:} Alles auf
-  der Stage wird im Repository mit dem Kommentar gesichert. 
+  der Stage wird im Repository mit dem Kommentar gesichert.
+\item \textbf{git status -s:} Gibt eine Übersicht über die Dateien im Arbeitsverzeichnis, der Stage und dem Repo. 
+
 \end{itemize}
 
 \end{document}
